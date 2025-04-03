@@ -28,7 +28,7 @@ float kelvin_to_fahrenheit(float kelvin) {
 }
 
 // function to categorize the temperatures
-static void categorize_temp(float celsius) {
+void categorize_temp(float celsius) {
     printf("Advisory: \n");
     // if the temp is less than 0, print freezing advisory 
     if (celsius < 0) {

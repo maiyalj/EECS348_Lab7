@@ -1,29 +1,12 @@
 CC := gcc
-CFLAGS = -Wall -Wextra -Werror 
-FOOTBALL_OBJ = football.o football_main.o
-TEMPERATURE_OBJ = temperature.o temperature_main.o
-FOOTBALL_EXEC = football
-TEMPERATURE_EXEC = temperature
 
-all: $(FOOTBALL_EXEC) $(TEMPERATURE_EXEC)
+all: football.exe temperature.exe
 
-$(FOOTBALL_EXEC): $(FOOTBALL_OBJ)
-	$(CC) $(CFLAGS) -o $(FOOTBALL_EXEC) $(FOOTBALL_OBJ)
-
-$(TEMPERATURE_EXEC): $(TEMPERATURE_OBJ)
-	$(CC) $(CFLAGS) -o $(TEMPERATURE_EXEC) $(TEMPERATURE_OBJ)
-
-football.o: football.c football.h
-	$(CC) $(CFLAGS) -c football.c
-
-football_main.o: football_main.c football.h
-	$(CC) $(CFLAGS) -c football_main.c
-
-temperature.o: temperature.c temperature.h
-	$(CC) $(CFLAGS) -c temperature.c
-
-temperature_main.o: temperature_main.c temperature.h
-	$(CC) $(CFLAGS) -c temperature_main.c
-
-clean:
-	rm -f $(FOOTBALL_OBJ) $(FOOTBALL_EXEC) $(TEMPERATURE_OBJ) $(TEMPERATURE_EXEC)
+football.exe: football_main.c football.c
+	@$(CC) football_main.c football.c -o football.exe
+	@./football.exe
+	@rm -f football.exe
+temperature.exe: temperature_main.c temperature.c
+	@$(CC) temperature_main.c temperature.c -o temperature.exe
+	@./temperature.exe
+	@rm -f temperature.exe

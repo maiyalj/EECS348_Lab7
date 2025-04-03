@@ -35,4 +35,28 @@ float celsius_to_kelvin(float celsius);
  */
 float kelvin_to_celsius(float celsius);
 
+/**
+ * @brief Convert temperature in Kelvin to Fahrenheit
+ * 
+ * @param kelvin
+ * @return float
+ */
+float kelvin_to_fahrenheit(float kelvin);
+
+/**
+ * @brief Convert temperature in Fahrenheit to Kelvin
+ * 
+ * @param fahrenheit
+ * @return float
+ */
+float fahrenheit_to_kelvin(float fahrenheit);
+
+/**
+ * @brief Categorize temperature: freezing, cold, comfortable, hot
+ * 
+ * @param celsius
+ * @return float
+ */
+void categorize_temp(float celsius);
+
 #endif /* __REPORT_H__ */

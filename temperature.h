@@ -51,12 +51,4 @@ float kelvin_to_fahrenheit(float kelvin);
  */
 float fahrenheit_to_kelvin(float fahrenheit);
 
-/**
- * @brief Categorize temperature: freezing, cold, comfortable, hot
- * 
- * @param celsius
- * @return float
- */
-void categorize_temp(float celsius);
-
 #endif /* __REPORT_H__ */
